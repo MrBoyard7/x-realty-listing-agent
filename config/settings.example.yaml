@@ -1,0 +1,20 @@
+# Copy this file to settings.yaml and adjust as needed.
+# Secrets (bearer tokens, client secrets) should NOT be placed here --
+# use environment variables / Azure Function App settings instead
+# (REALTY_AGENT_X_BEARER_TOKEN, etc.). See docs/SETUP.md.
+
+x_username: "test_wholesale_deals"
+
+onedrive_drive_id: ""
+onedrive_file_path: "/RealEstate/listings.xlsx"
+
+timezone: "America/Phoenix"
+operating_days: ["Mon", "Tue", "Wed", "Thu", "Fri"]
+operating_start: "06:00"
+operating_end: "18:00"
+sync_frequency_minutes: 5
+
+backfill_days: 0
+
+ai_provider: "none"      # "none" | "anthropic" | "azure_openai"
+ai_model: "claude-haiku-4-5-20251001"

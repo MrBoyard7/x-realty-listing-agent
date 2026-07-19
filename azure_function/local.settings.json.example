@@ -1,0 +1,14 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "FUNCTIONS_WORKER_RUNTIME": "python",
+    "REALTY_AGENT_X_USERNAME": "test_wholesale_deals",
+    "REALTY_AGENT_X_BEARER_TOKEN": "",
+    "REALTY_AGENT_ONEDRIVE_DRIVE_ID": "",
+    "REALTY_AGENT_ONEDRIVE_FILE_PATH": "/RealEstate/listings.xlsx",
+    "AZURE_TENANT_ID": "",
+    "AZURE_CLIENT_ID": "",
+    "AZURE_CLIENT_SECRET": ""
+  }
+}

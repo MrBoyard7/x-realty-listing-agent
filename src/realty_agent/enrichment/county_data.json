@@ -1,0 +1,36 @@
+{
+  "_comment": "Editable reference data. Add rows as new cities/counties are encountered. City keys are lowercase 'city, ST'.",
+  "city_to_county": {
+    "phoenix, az": "Maricopa",
+    "scottsdale, az": "Maricopa",
+    "tempe, az": "Maricopa",
+    "mesa, az": "Maricopa",
+    "chandler, az": "Maricopa",
+    "glendale, az": "Maricopa",
+    "gilbert, az": "Maricopa",
+    "peoria, az": "Maricopa",
+    "surprise, az": "Maricopa",
+    "avondale, az": "Maricopa",
+    "tucson, az": "Pima",
+    "oro valley, az": "Pima",
+    "flagstaff, az": "Coconino",
+    "prescott, az": "Yavapai",
+    "prescott valley, az": "Yavapai",
+    "yuma, az": "Yuma",
+    "sierra vista, az": "Cochise",
+    "lake havasu city, az": "Mohave",
+    "kingman, az": "Mohave",
+    "casa grande, az": "Pinal",
+    "san tan valley, az": "Pinal"
+  },
+  "county_assessor_url": {
+    "maricopa, az": "https://mcassessor.maricopa.gov/",
+    "pima, az": "https://www.asr.pima.gov/",
+    "coconino, az": "https://www.coconino.az.gov/162/Assessor",
+    "yavapai, az": "https://www.yavapaiaz.gov/assessor",
+    "yuma, az": "https://www.yumacountyaz.gov/government/assessor",
+    "cochise, az": "https://www.cochise.az.gov/assessor",
+    "mohave, az": "https://www.mohavecounty.us/ContentPage.aspx?id=39&cid=76",
+    "pinal, az": "https://www.pinalcountyaz.gov/Assessor/Pages/Home.aspx"
+  }
+}

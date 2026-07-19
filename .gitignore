@@ -1,0 +1,25 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+
+.venv/
+venv/
+.env
+
+.pytest_cache/
+.mypy_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# Azure Functions local files (never commit secrets)
+azure_function/local.settings.json
+azure_function/.python_packages/
+azure_function/__azurite_db*__.json
+azure_function/__blobstorage__/
+azure_function/__queuestorage__/
+
+.DS_Store

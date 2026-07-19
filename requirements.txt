@@ -1,0 +1,5 @@
+openpyxl>=3.1,<4.0
+PyYAML>=6.0,<7.0
+requests>=2.31,<3.0
+azure-functions>=1.20,<2.0
+tzdata>=2024.1; sys_platform == "win32"

@@ -1,0 +1,55 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "x-realty-listing-agent"
+version = "0.1.0"
+description = "Agent that extracts real estate listings from X posts into an Excel workbook on OneDrive."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+dependencies = [
+  "openpyxl>=3.1,<4.0",
+  "PyYAML>=6.0,<7.0",
+  "requests>=2.31,<3.0",
+  "azure-functions>=1.20,<2.0",
+  "tzdata>=2024.1; sys_platform == 'win32'",
+]
+authors = [
+  { name = "Prince Boyard MBOUNGOU NGOMA", email = "mrboyard7@example.com" }
+]
+keywords = ["real-estate", "automation", "azure-functions", "microsoft-graph", "excel", "ai-extraction"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Office/Business :: Financial :: Investment",
+]
+
+[project.urls]
+Homepage = "https://github.com/MrBoyard7/x-realty-listing-agent"
+Repository = "https://github.com/MrBoyard7/x-realty-listing-agent"
+Issues = "https://github.com/MrBoyard7/x-realty-listing-agent/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.black]
+line-length = 100
+target-version = ["py39"]
+
+[tool.pytest.ini_options]
+addopts = "--cov=realty_agent --cov-report=term-missing"
+testpaths = ["tests"]
+
+[tool.coverage.run]
+source = ["src/realty_agent"]
+
+[tool.mypy]
+python_version = "3.9"
+ignore_missing_imports = true
