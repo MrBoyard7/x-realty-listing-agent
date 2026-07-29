@@ -15,7 +15,7 @@ account (development) and the production account (deployment).
 from __future__ import annotations
 
 from datetime import datetime
-from typing import List, Optional
+from typing import Any, Dict, List, Optional
 
 import requests
 
@@ -46,8 +46,8 @@ class XApiClient(XClient):
         resp.raise_for_status()
         return resp.json()["data"]["id"]
 
-    def _list_tweets(self, user_id: str, params: dict) -> List[RawPost]:
-        base_params = {
+    def _list_tweets(self, user_id: str, params: Dict[str, Any]) -> List[RawPost]:
+        base_params: Dict[str, Any] = {
             "max_results": 100,
             "tweet.fields": "created_at,text",
         }
@@ -75,12 +75,12 @@ class XApiClient(XClient):
 
     def fetch_recent_posts(self, username: str, since_id: str | None = None) -> List[RawPost]:
         user_id = self._user_id_for(username)
-        params = {}
+        params: Dict[str, Any] = {}
         if since_id:
             params["since_id"] = since_id
         return self._list_tweets(user_id, params)
 
     def fetch_posts_since(self, username: str, since: datetime) -> List[RawPost]:
         user_id = self._user_id_for(username)
-        params = {"start_time": since.isoformat()}
+        params: Dict[str, Any] = {"start_time": since.isoformat()}
         return self._list_tweets(user_id, params)
